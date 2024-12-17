@@ -1,0 +1,50 @@
+[
+    {
+        "eventID": 1,
+        "storyText": "You opened your eyes in the cradle.",
+        "choices": [
+            {
+                "choiceText": "Cry",
+                "resultText": "Your mom rushes to your side and takes care of you.",
+                "nextEventID": 2
+            },
+            {
+                "choiceText": "Don't Cry",
+                "resultText": "You sleep so quietly that your family forgets you exist.",
+                "nextEventID": 2
+            }
+        ]
+    },
+    {
+        "eventID": 2,
+        "storyText": "You see a shining golden clock on top of the cabinet.",
+        "choices": [
+            {
+                "choiceText": "Try to reach it by stacking the boxes",
+                "resultText": "The boxes tipped over and you fainted. -1 health",
+                "nextEventID": 3
+            },
+            {
+                "choiceText": "Cry and tell your parents that you want the object",
+                "resultText": "Your father slapped you for making too much noise. -1 health",
+                "nextEventID": 3
+            }
+        ]
+    },
+    {
+        "eventID": 3,
+        "storyText": "When you open your eyes, you see your mother breastfeeding you. +1 health.",
+        "choices": [
+            {
+                "choiceText": "Move forward",
+                "resultText": "Your health increases.",
+                "nextEventID": 4
+            },
+            {
+                "choiceText": "Stay quiet",
+                "resultText": "You recover slowly.",
+                "nextEventID": 4
+            }
+        ]
+    }
+]
