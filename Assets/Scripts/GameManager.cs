@@ -1,118 +1,102 @@
 using UnityEngine;
-using System.Collections.Generic;
-
-[System.Serializable]
-public class Choice
-{
-    public string choiceText;      // Seçenek metni
-    public string resultText;      // Seçim sonucu
-    public int nextEventID;        // Bir sonraki event ID'si
-}
-
-[System.Serializable]
-public class GameEvent
-{
-    public int eventID;            // Olay kimliði
-    public string storyText;       // Hikaye metni
-    public Choice[] choices;       // Seçenekler
-    public Sprite backgroundImage; // Arka plan görseli (JSON'da kullanmak istemezseniz çýkarabilirsiniz)
-}
+using TMPro;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     [Header("UI Elements")]
-    public UnityEngine.UI.Image backgroundImage; // Arka plan görseli
-    public TMPro.TextMeshProUGUI storyText;      // Hikaye metni
-    public UnityEngine.UI.Button choice1Button;  // Seçenek 1 butonu
-    public UnityEngine.UI.Button choice2Button;  // Seçenek 2 butonu
-    public TMPro.TextMeshProUGUI choice1Text;    // Seçenek 1 yazý
-    public TMPro.TextMeshProUGUI choice2Text;    // Seçenek 2 yazý
+    public TextMeshProUGUI storyText;         // Hikaye metni
+    public Button choice1Button;             // Seçenek 1 butonu
+    public Button choice2Button;             // Seçenek 2 butonu
+    public TextMeshProUGUI choice1Text;      // Seçenek 1 metni
+    public TextMeshProUGUI choice2Text;      // Seçenek 2 metni
 
-    private List<GameEvent> gameEvents;          // Oyun olaylarý
-    private GameEvent currentEvent;              // Þu anki olay
+    [Header("Level Data")]
+    public int currentLevel = 1;             // Þu anki level
+
+    [Header("Next Levels")]
+    public string nextLevelForChoice1;       // Seçenek 1 için gidilecek level
+    public string nextLevelForChoice2;       // Seçenek 2 için gidilecek level
 
     void Start()
     {
-        LoadJSON();
-        LoadEvent(1); // Ýlk event ID'si 1 ile baþlýyoruz
+        // Baþlangýçta ilk leveli yükle
+        LoadLevel(currentLevel);
     }
 
-    void LoadJSON()
+    void LoadLevel(int level)
     {
-        // JSON'u Resources klasöründen yükle
-        TextAsset jsonFile = Resources.Load<TextAsset>("storyevents");
-        if (jsonFile != null)
+        currentLevel = level;
+
+        // Bütün level verilerini buraya gireceksin,
+        switch (level)
         {
-            gameEvents = new List<GameEvent>(JsonHelper.FromJson<GameEvent>(jsonFile.text));
-            Debug.Log("JSON baþarýyla yüklendi!");
-        }
-        else
-        {
-            Debug.LogError("JSON dosyasý bulunamadý!");
+            case 1:
+                // Level 1 bilgileri
+                storyText.text = "You opened your eyes in the cradle.";
+                choice1Text.text = "Cry";
+                choice2Text.text = "Don’t Cry";
+                nextLevelForChoice1 = "Level2";
+                nextLevelForChoice2 = "Level3";
+
+                // Butonlara iþlev ekle
+                SetButtonActions("Your mom rushes to your side and takes care of you.",
+                                 "You sleep so quietly that your family forgets you exist.");
+                break;
+
+            case 2:
+                // Level 2 bilgileri
+                storyText.text = "You see a shining golden clock on top of the cabinet.";
+                choice1Text.text = "Try to reach it by stacking the boxes";
+                choice2Text.text = "Cry and tell your parents that you want the object";
+                nextLevelForChoice1 = "Level3";
+                nextLevelForChoice2 = "Level4";
+
+                // Butonlara iþlev ekle
+                SetButtonActions("The boxes tipped over and you fainted. -1 health",
+                                 "Your father slapped you for making too much noise. -1 health");
+                break;
+
+            // Diðer level'lar buraya eklenebilir
+            default:
+                storyText.text = "The End. Thanks for playing!";
+                choice1Text.text = "";
+                choice2Text.text = "";
+                choice1Button.gameObject.SetActive(false);
+                choice2Button.gameObject.SetActive(false);
+                break;
         }
     }
 
-    void LoadEvent(int eventID)
+    void SetButtonActions(string result1, string result2)
     {
-        // Þu anki olayý bul ve UI'ye yükle
-        currentEvent = gameEvents.Find(e => e.eventID == eventID);
-
-        if (currentEvent != null)
+        // Seçenek 1 iþlemleri
+        choice1Button.onClick.RemoveAllListeners();
+        choice1Button.onClick.AddListener(() =>
         {
-            storyText.text = currentEvent.storyText;
-
-            // Seçenek 1
-            choice1Text.text = currentEvent.choices[0].choiceText;
+            storyText.text = result1;
+            choice1Text.text = "Next Level";
             choice1Button.onClick.RemoveAllListeners();
-            choice1Button.onClick.AddListener(() => OnChoiceSelected(0));
+            choice1Button.onClick.AddListener(() => LoadNextLevel(nextLevelForChoice1));
+            choice2Button.interactable = false; // Diðer butonu devre dýþý býrak
+        });
 
-            // Seçenek 2
-            choice2Text.text = currentEvent.choices[1].choiceText;
+        // Seçenek 2 iþlemleri
+        choice2Button.onClick.RemoveAllListeners();
+        choice2Button.onClick.AddListener(() =>
+        {
+            storyText.text = result2;
+            choice2Text.text = "Next Level";
             choice2Button.onClick.RemoveAllListeners();
-            choice2Button.onClick.AddListener(() => OnChoiceSelected(1));
-        }
-        else
-        {
-            Debug.LogError("Event ID " + eventID + " bulunamadý!");
-        }
+            choice2Button.onClick.AddListener(() => LoadNextLevel(nextLevelForChoice2));
+            choice1Button.interactable = false; // Diðer butonu devre dýþý býrak
+        });
     }
 
-    void OnChoiceSelected(int choiceIndex)
+    void LoadNextLevel(string nextLevelName)
     {
-        // Sonuç göster (geçici olarak hikaye metninin yerine yazdýrýyoruz)
-        storyText.text = currentEvent.choices[choiceIndex].resultText;
-
-        // Bir sonraki event'i yükle
-        int nextEventID = currentEvent.choices[choiceIndex].nextEventID;
-        if (nextEventID > 0)
-        {
-            Invoke("LoadNextEvent", 2f); // 2 saniye bekleyip bir sonraki event'i yükle
-        }
-        else
-        {
-            Debug.Log("Oyun bitti!");
-        }
-    }
-
-    void LoadNextEvent()
-    {
-        LoadEvent(currentEvent.choices[0].nextEventID);
-    }
-}
-
-// JSON Helper Sýnýfý
-public static class JsonHelper
-{
-    public static T[] FromJson<T>(string json)
-    {
-        string newJson = "{ \"array\": " + json + "}";
-        Wrapper<T> wrapper = JsonUtility.FromJson<Wrapper<T>>(newJson);
-        return wrapper.array;
-    }
-
-    [System.Serializable]
-    private class Wrapper<T>
-    {
-        public T[] array;
+        // Belirlenen level'e geç
+        SceneManager.LoadScene(nextLevelName);
     }
 }
