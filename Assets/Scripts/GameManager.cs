@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
@@ -7,58 +7,56 @@ public class GameManager : MonoBehaviour
 {
     [Header("UI Elements")]
     public TextMeshProUGUI storyText;         // Hikaye metni
-    public Button choice1Button;             // Se�enek 1 butonu
-    public Button choice2Button;             // Se�enek 2 butonu
-    public TextMeshProUGUI choice1Text;      // Se�enek 1 metni
-    public TextMeshProUGUI choice2Text;      // Se�enek 2 metni
+    public Button choice1Button;             // Seçenek 1 butonu
+    public Button choice2Button;             // Seçenek 2 butonu
+    public TextMeshProUGUI choice1Text;      // Seçenek 1 metni
+    public TextMeshProUGUI choice2Text;      // Seçenek 2 metni
 
     [Header("Level Data")]
-    public int currentLevel = 1;             // �u anki level
+    public int currentLevel;                 // Şu anki level (Inspector'dan ayarlanabilir)
 
     [Header("Next Levels")]
-    public string nextLevelForChoice1;       // Se�enek 1 i�in gidilecek level
-    public string nextLevelForChoice2;       // Se�enek 2 i�in gidilecek level
+    public string nextLevelForChoice1;       // Seçenek 1 için gidilecek level (Inspector'dan ayarlanır)
+    public string nextLevelForChoice2;       // Seçenek 2 için gidilecek level (Inspector'dan ayarlanır)
+
+    private bool resultDisplayed = false;    // Sonuç gösterildi mi?
 
     void Start()
     {
-        // Ba�lang��ta ilk leveli y�kle
-        LoadLevel(currentLevel);
+        // Başlangıçta Inspector'dan ayarlanan leveli yükle
+        LoadLevel();
     }
 
-    void LoadLevel(int level)
+    void LoadLevel()
     {
-        currentLevel = level;
-
-        // B�t�n level verilerini buraya gireceksin,
-        switch (level)
+        // Şu anki levelin bilgilerini ayarla.Bu kısımda yeni level eklediğinizde error alıyonuz. File - Build settings kısmına git
+        // Eklemek istediğin level da olduğundan emin ol (hierarchy kısmına bak), sağ aşağıda add scene var ona bas.
+        switch (currentLevel)
         {
             case 1:
-                // Level 1 bilgileri
                 storyText.text = "You opened your eyes in the cradle.";
                 choice1Text.text = "Cry";
-                choice2Text.text = "Don�t Cry";
-                nextLevelForChoice1 = "Level2";
-                nextLevelForChoice2 = "Level3";
-
-                // Butonlara i�lev ekle
+                choice2Text.text = "Don’t Cry";
                 SetButtonActions("Your mom rushes to your side and takes care of you.",
                                  "You sleep so quietly that your family forgets you exist.");
                 break;
 
             case 2:
-                // Level 2 bilgileri
                 storyText.text = "You see a shining golden clock on top of the cabinet.";
                 choice1Text.text = "Try to reach it by stacking the boxes";
                 choice2Text.text = "Cry and tell your parents that you want the object";
-                nextLevelForChoice1 = "Level3";
-                nextLevelForChoice2 = "Level4";
-
-                // Butonlara i�lev ekle
                 SetButtonActions("The boxes tipped over and you fainted. -1 health",
                                  "Your father slapped you for making too much noise. -1 health");
                 break;
 
-            // Di�er level'lar buraya eklenebilir
+            case 3:
+                storyText.text = "Now that you're older, your father said he's taking you hunting.";
+                choice1Text.text = "Tell him you agreed to hunt";
+                choice2Text.text = "Tell him you want to read a book";
+                SetButtonActions("You set off into the woods with your father.",
+                                 "Your father said, 'Are you going to study and become a philosopher?', slapped you and forced you to go hunting.");
+                break;
+
             default:
                 storyText.text = "The End. Thanks for playing!";
                 choice1Text.text = "";
@@ -71,32 +69,43 @@ public class GameManager : MonoBehaviour
 
     void SetButtonActions(string result1, string result2)
     {
-        // Se�enek 1 i�lemleri
+        // Seçenek 1 işlemleri
         choice1Button.onClick.RemoveAllListeners();
         choice1Button.onClick.AddListener(() =>
         {
-            storyText.text = result1;
-            choice1Text.text = "Next Level";
-            choice1Button.onClick.RemoveAllListeners();
-            choice1Button.onClick.AddListener(() => LoadNextLevel(nextLevelForChoice1));
-            choice2Button.interactable = false; // Di�er butonu devre d��� b�rak
+            if (!resultDisplayed) // Eğer sonuç gösterilmediyse
+            {
+                choice1Text.text = result1;    // Sonucu kartta göster
+                resultDisplayed = true;       // Sonuç gösterildi olarak işaretle
+                choice2Button.interactable = false; // Diğer butonu devre dışı bırak
+            }
+            else
+            {
+                LoadNextLevel(nextLevelForChoice1); // İkinci tıklamada Inspector'dan gelen değerle level geçişi
+            }
         });
 
-        // Se�enek 2 i�lemleri
+        // Seçenek 2 işlemleri
         choice2Button.onClick.RemoveAllListeners();
         choice2Button.onClick.AddListener(() =>
         {
-            storyText.text = result2;
-            choice2Text.text = "Next Level";
-            choice2Button.onClick.RemoveAllListeners();
-            choice2Button.onClick.AddListener(() => LoadNextLevel(nextLevelForChoice2));
-            choice1Button.interactable = false; // Di�er butonu devre d��� b�rak
+            if (!resultDisplayed) // Eğer sonuç gösterilmediyse
+            {
+                choice2Text.text = result2;    // Sonucu kartta göster
+                resultDisplayed = true;       // Sonuç gösterildi olarak işaretle
+                choice1Button.interactable = false; // Diğer butonu devre dışı bırak
+            }
+            else
+            {
+                LoadNextLevel(nextLevelForChoice2); // İkinci tıklamada Inspector'dan gelen değerle level geçişi
+            }
         });
     }
 
     void LoadNextLevel(string nextLevelName)
     {
-        // Belirlenen level'e ge�
+        // Sonuç gösterimi sıfırla ve bir sonraki level'e geç
+        resultDisplayed = false;
         SceneManager.LoadScene(nextLevelName);
     }
 }

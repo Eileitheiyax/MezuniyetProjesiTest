@@ -1614,8 +1614,9 @@ MonoBehaviour:
   choice2Button: {fileID: 151268020}
   choice1Text: {fileID: 265124893}
   choice2Text: {fileID: 1205256707}
+  currentLevel: 1
   nextLevelForChoice1: Level2
-  nextLevelForChoice2: Level2
+  nextLevelForChoice2: Level3
 --- !u!4 &2028644027
 Transform:
   m_ObjectHideFlags: 0
