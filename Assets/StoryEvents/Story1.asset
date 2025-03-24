@@ -10,11 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b9c8f4f1ce6aa86428a2e2b9ac17ea87, type: 3}
-  m_Name: StoryEvent_Level1
+  m_Name: Story1
   m_EditorClassIdentifier: 
   storyText: You opened your eyes in the cradle
-  choice1Text: He says that there are not many monsters left out there because of
-    the war, and the rest are hiding.
+  choice1Text: Cry
   choice2Text: Dont Cry
   result1: You sleep so quietly that your family forgets you exist.
   result2: You sleep so quietly that your family forgets you exist.

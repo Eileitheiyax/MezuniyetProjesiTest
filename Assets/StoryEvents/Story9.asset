@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b9c8f4f1ce6aa86428a2e2b9ac17ea87, type: 3}
-  m_Name: StoryEvent_Level4
+  m_Name: Story9
   m_EditorClassIdentifier: 
-  storyText: You saw animal footprints on the ground. What are you going to do?
-  choice1Text: Follow the tracks
-  choice2Text: Stay where you are
-  result1: When you were following the tracks, you saw a deer drinking water
-  result2: As you stood there in silence, a deer slowly approached you.
-  nextLevelForChoice1: 4
-  nextLevelForChoice2: 4
+  storyText: Are you gonna trace the source of the noise?
+  choice1Text: 'Yes. '
+  choice2Text: No.
+  result1: You see a young bear shot with an arrow. It's badly wounded.
+  result2: You're heading the other way.
+  nextLevelForChoice1: 9
+  nextLevelForChoice2: 11
   isCorrectChoice1: 0
   isCorrectChoice2: 0
   isCheckpoint: 0

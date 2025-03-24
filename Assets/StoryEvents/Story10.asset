@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b9c8f4f1ce6aa86428a2e2b9ac17ea87, type: 3}
-  m_Name: StoryEvent_Level5
+  m_Name: Story10
   m_EditorClassIdentifier: 
-  storyText: You have a deer in front of you and you need to make a quick decision.
-    What are you going to do?
+  storyText: The bear is extremely weak. It can't react to you if you attack. What
+    will you do?
   choice1Text: Kill it.
   choice2Text: Dont kill it.
-  result1: Your father is proud of you.
-  result2: Your father is ashamed of you. Then he throws his spear at the deer and
-    kills it.
+  result1: You killed the bear. You tie it up with ropes and start dragging it back
+    to your village.
+  result2: 'I don''t understand why, but okay. You''re heading the other way. '
   nextLevelForChoice1: 5
   nextLevelForChoice2: 5
   isCorrectChoice1: 0
