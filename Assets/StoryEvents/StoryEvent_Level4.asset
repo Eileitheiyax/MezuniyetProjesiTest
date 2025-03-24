@@ -17,8 +17,8 @@ MonoBehaviour:
   choice2Text: Stay where you are
   result1: When you were following the tracks, you saw a deer drinking water
   result2: As you stood there in silence, a deer slowly approached you.
-  nextLevelForChoice1: 5
-  nextLevelForChoice2: 5
+  nextLevelForChoice1: 4
+  nextLevelForChoice2: 4
   isCorrectChoice1: 0
   isCorrectChoice2: 0
   isCheckpoint: 0

@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement; // Sahne yönetimi için
 
 public class GameManager : MonoBehaviour
 {
@@ -33,6 +34,7 @@ public class GameManager : MonoBehaviour
         choice1Text.text = "";
         choice2Text.text = "";
 
+        // Eğer mevcut level geçerli değilse, level dışı bir index varsa işlemi durdur
         if (currentLevel >= storyEvents.Length || storyEvents[currentLevel] == null)
         {
             Debug.LogWarning("Geçerli hikaye bulunamadı. currentLevel: " + currentLevel);
@@ -51,6 +53,7 @@ public class GameManager : MonoBehaviour
         choice1Button.onClick.RemoveAllListeners();
         choice2Button.onClick.RemoveAllListeners();
 
+        // Seçim 1 - Buton tıklama işlemi
         choice1Button.onClick.AddListener(() =>
         {
             if (!waitingForNextLevel)
@@ -68,10 +71,12 @@ public class GameManager : MonoBehaviour
             else
             {
                 currentLevel = queuedNextLevel;
-                LoadLevel();
+                // Sahne geçişini sağlayalım
+                LoadNextLevel();
             }
         });
 
+        // Seçim 2 - Buton tıklama işlemi
         choice2Button.onClick.AddListener(() =>
         {
             if (!waitingForNextLevel)
@@ -89,8 +94,17 @@ public class GameManager : MonoBehaviour
             else
             {
                 currentLevel = queuedNextLevel;
-                LoadLevel();
+                // Sahne geçişini sağlayalım
+                LoadNextLevel();
             }
         });
+    }
+
+    // Yeni level'a geçişi sağlayan fonksiyon
+    private void LoadNextLevel()
+    {
+        // Level geçişi için sahne ismini SceneManager ile değiştirelim
+        string sceneName = "Level" + (currentLevel + 1); // Level1, Level2, ...
+        SceneManager.LoadScene(sceneName); // Seçilen sahneyi yükle
     }
 }

@@ -13,12 +13,13 @@ MonoBehaviour:
   m_Name: StoryEvent_Level1
   m_EditorClassIdentifier: 
   storyText: You opened your eyes in the cradle
-  choice1Text: Cry
+  choice1Text: He says that there are not many monsters left out there because of
+    the war, and the rest are hiding.
   choice2Text: Dont Cry
   result1: You sleep so quietly that your family forgets you exist.
   result2: You sleep so quietly that your family forgets you exist.
-  nextLevelForChoice1: 2
-  nextLevelForChoice2: 2
+  nextLevelForChoice1: 1
+  nextLevelForChoice2: 1
   isCorrectChoice1: 0
   isCorrectChoice2: 1
   isCheckpoint: 0

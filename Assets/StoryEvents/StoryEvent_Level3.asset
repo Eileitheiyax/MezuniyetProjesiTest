@@ -18,8 +18,8 @@ MonoBehaviour:
   result1: You set off into the woods with your father.
   result2: "Your father said, \u201CAre you going to study and become a philosopher?\u201D,
     slapped you and forced you to go hunting."
-  nextLevelForChoice1: 4
-  nextLevelForChoice2: 4
+  nextLevelForChoice1: 3
+  nextLevelForChoice2: 3
   isCorrectChoice1: 0
   isCorrectChoice2: 1
   isCheckpoint: 0

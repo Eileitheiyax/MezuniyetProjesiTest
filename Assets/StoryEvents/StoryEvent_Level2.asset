@@ -19,8 +19,8 @@ MonoBehaviour:
     the boxes tipped over and you hit your head and fainted. -1 health
   result2: Your father slapped you for making too much noise and you fainted. -1
     health
-  nextLevelForChoice1: 3
-  nextLevelForChoice2: 3
+  nextLevelForChoice1: 2
+  nextLevelForChoice2: 2
   isCorrectChoice1: 0
   isCorrectChoice2: 1
   isCheckpoint: 0
