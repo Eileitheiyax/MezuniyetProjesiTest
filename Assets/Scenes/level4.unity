@@ -647,6 +647,55 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 359225806}
   m_CullTransparentMesh: 1
+--- !u!1 &442989834
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 442989836}
+  - component: {fileID: 442989835}
+  m_Layer: 0
+  m_Name: HealthManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &442989835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 442989834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6f6b6d0af9df094e89c8499c8d6fb0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 3
+  currentHealth: 0
+  hearts: []
+  fullHeart: {fileID: 0}
+  emptyHeart: {fileID: 0}
+--- !u!4 &442989836
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 442989834}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 84.185, y: 219.82999, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1614,9 +1663,14 @@ MonoBehaviour:
   choice2Button: {fileID: 151268020}
   choice1Text: {fileID: 265124893}
   choice2Text: {fileID: 1205256707}
-  currentLevel: 4
-  nextLevelForChoice1: Level4
-  nextLevelForChoice2: Level4
+  storyEvents:
+  - {fileID: 11400000, guid: fad34fa31df81ac4aae154533acd4785, type: 2}
+  - {fileID: 11400000, guid: aa94582f287d02042adddd88cd4cbf4d, type: 2}
+  - {fileID: 11400000, guid: 214112526364b924aa127f997c8b261d, type: 2}
+  - {fileID: 11400000, guid: 7a7c2e80009167f4e8ad23c971dd26f6, type: 2}
+  - {fileID: 11400000, guid: fec1b6c584c28624badd0f25593e368d, type: 2}
+  currentLevel: 3
+  healthManager: {fileID: 442989835}
 --- !u!4 &2028644027
 Transform:
   m_ObjectHideFlags: 0
@@ -1716,3 +1770,4 @@ SceneRoots:
   - {fileID: 566037184}
   - {fileID: 1544904616}
   - {fileID: 2028644027}
+  - {fileID: 442989836}

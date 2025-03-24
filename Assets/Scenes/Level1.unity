@@ -160,8 +160,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 250, y: -118}
-  m_SizeDelta: {x: 300, y: 400}
+  m_AnchoredPosition: {x: 250, y: -38}
+  m_SizeDelta: {x: 300, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &151268018
 MonoBehaviour:
@@ -858,9 +858,9 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 0.5
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -927,8 +927,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -250, y: -118}
-  m_SizeDelta: {x: 300, y: 400}
+  m_AnchoredPosition: {x: -250, y: -38}
+  m_SizeDelta: {x: 300, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &607586501
 MonoBehaviour:
@@ -1203,8 +1203,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -0.5, y: -0.5}
+  m_SizeDelta: {x: -1, y: -1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &835294101
 CanvasRenderer:
@@ -1234,7 +1234,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 6b7b90297e1931c499bf992119ffca8b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5bbb035d14949a54ea47a9cca5b7f707, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1378,6 +1378,55 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -25}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1218429607
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1218429609}
+  - component: {fileID: 1218429608}
+  m_Layer: 0
+  m_Name: HealthManagerObj
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1218429608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1218429607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6f6b6d0af9df094e89c8499c8d6fb0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 2
+  currentHealth: 2
+  hearts: []
+  fullHeart: {fileID: 0}
+  emptyHeart: {fileID: 0}
+--- !u!4 &1218429609
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1218429607}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 84.185, y: 219.82999, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1434454165
 GameObject:
   m_ObjectHideFlags: 0
@@ -1614,9 +1663,14 @@ MonoBehaviour:
   choice2Button: {fileID: 151268020}
   choice1Text: {fileID: 265124893}
   choice2Text: {fileID: 1205256707}
-  currentLevel: 1
-  nextLevelForChoice1: Level2
-  nextLevelForChoice2: Level3
+  storyEvents:
+  - {fileID: 11400000, guid: fad34fa31df81ac4aae154533acd4785, type: 2}
+  - {fileID: 11400000, guid: aa94582f287d02042adddd88cd4cbf4d, type: 2}
+  - {fileID: 11400000, guid: 214112526364b924aa127f997c8b261d, type: 2}
+  - {fileID: 11400000, guid: 7a7c2e80009167f4e8ad23c971dd26f6, type: 2}
+  - {fileID: 11400000, guid: fec1b6c584c28624badd0f25593e368d, type: 2}
+  currentLevel: 0
+  healthManager: {fileID: 1218429608}
 --- !u!4 &2028644027
 Transform:
   m_ObjectHideFlags: 0
@@ -1716,3 +1770,4 @@ SceneRoots:
   - {fileID: 566037184}
   - {fileID: 1544904616}
   - {fileID: 2028644027}
+  - {fileID: 1218429609}

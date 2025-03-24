@@ -1,25 +1,18 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class StoryEvent : MonoBehaviour
+[CreateAssetMenu(fileName = "New Story Event", menuName = "Story/Story Event")]
+public class StoryEvent : ScriptableObject
 {
-    [System.Serializable]
-    public class Choice
-    {
-        public string choiceText;      // Seçenek metni
-        public Sprite choiceImage;     // Seçenek görseli
-        public string resultText;      // Seçim sonucu
-        public int nextEventID;        // Bir sonraki event ID'si
-    }
+    [TextArea] public string storyText;
+    public string choice1Text;
+    public string choice2Text;
+    [TextArea] public string result1;
+    [TextArea] public string result2;
+    public int nextLevelForChoice1;
+    public int nextLevelForChoice2;
 
-    [System.Serializable]
-    public class GameEvent
-    {
-        public int eventID;            // Olay kimliði
-        public string storyText;       // Hikaye metni
-        public Choice[] choices;       // Seçenekler dizisi (2 seçim)
-        public Sprite backgroundImage; // Arka plan görseli
-    }
+    public bool isCorrectChoice1;
+    public bool isCorrectChoice2;
+    public bool isCheckpoint;
 
 }

@@ -1,111 +1,96 @@
 ﻿using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     [Header("UI Elements")]
-    public TextMeshProUGUI storyText;         // Hikaye metni
-    public Button choice1Button;             // Seçenek 1 butonu
-    public Button choice2Button;             // Seçenek 2 butonu
-    public TextMeshProUGUI choice1Text;      // Seçenek 1 metni
-    public TextMeshProUGUI choice2Text;      // Seçenek 2 metni
+    public TextMeshProUGUI storyText;
+    public Button choice1Button;
+    public Button choice2Button;
+    public TextMeshProUGUI choice1Text;
+    public TextMeshProUGUI choice2Text;
 
-    [Header("Level Data")]
-    public int currentLevel;                 // Şu anki level (Inspector'dan ayarlanabilir)
+    [Header("Story Data")]
+    public StoryEvent[] storyEvents;
+    public int currentLevel = 0;
 
-    [Header("Next Levels")]
-    public string nextLevelForChoice1;       // Seçenek 1 için gidilecek level (Inspector'dan ayarlanır)
-    public string nextLevelForChoice2;       // Seçenek 2 için gidilecek level (Inspector'dan ayarlanır)
+    [Header("Health System")]
+    public HealthManager healthManager;
 
-    private bool resultDisplayed = false;    // Sonuç gösterildi mi?
+    private bool waitingForNextLevel = false;
+    private int queuedNextLevel = -1;
 
     void Start()
     {
-        // Başlangıçta Inspector'dan ayarlanan leveli yükle
         LoadLevel();
     }
 
     void LoadLevel()
     {
-        // Şu anki levelin bilgilerini ayarla.Bu kısımda yeni level eklediğinizde error alıyonuz. File - Build settings kısmına git
-        // Eklemek istediğin level da olduğundan emin ol (hierarchy kısmına bak), sağ aşağıda add scene var ona bas.
-        switch (currentLevel)
+        choice1Button.gameObject.SetActive(true);
+        choice2Button.gameObject.SetActive(true);
+        choice1Text.text = "";
+        choice2Text.text = "";
+
+        if (currentLevel >= storyEvents.Length || storyEvents[currentLevel] == null)
         {
-            case 1:
-                storyText.text = "You opened your eyes in the cradle.";
-                choice1Text.text = "Cry";
-                choice2Text.text = "Don’t Cry";
-                SetButtonActions("Your mom rushes to your side and takes care of you.",
-                                 "You sleep so quietly that your family forgets you exist.");
-                break;
-
-            case 2:
-                storyText.text = "You see a shining golden clock on top of the cabinet.";
-                choice1Text.text = "Try to reach it by stacking the boxes";
-                choice2Text.text = "Cry and tell your parents that you want the object";
-                SetButtonActions("The boxes tipped over and you fainted. -1 health",
-                                 "Your father slapped you for making too much noise. -1 health");
-                break;
-
-            case 3:
-                storyText.text = "Now that you're older, your father said he's taking you hunting.";
-                choice1Text.text = "Tell him you agreed to hunt";
-                choice2Text.text = "Tell him you want to read a book";
-                SetButtonActions("You set off into the woods with your father.",
-                                 "Your father said, 'Are you going to study and become a philosopher?', slapped you and forced you to go hunting.");
-                break;
-
-            default:
-                storyText.text = "The End. Thanks for playing!";
-                choice1Text.text = "";
-                choice2Text.text = "";
-                choice1Button.gameObject.SetActive(false);
-                choice2Button.gameObject.SetActive(false);
-                break;
+            Debug.LogWarning("Geçerli hikaye bulunamadı. currentLevel: " + currentLevel);
+            return;
         }
-    }
 
-    void SetButtonActions(string result1, string result2)
-    {
-        // Seçenek 1 işlemleri
+        waitingForNextLevel = false;
+        queuedNextLevel = -1;
+
+        StoryEvent currentEvent = storyEvents[currentLevel];
+
+        storyText.text = currentEvent.storyText;
+        choice1Text.text = currentEvent.choice1Text;
+        choice2Text.text = currentEvent.choice2Text;
+
         choice1Button.onClick.RemoveAllListeners();
+        choice2Button.onClick.RemoveAllListeners();
+
         choice1Button.onClick.AddListener(() =>
         {
-            if (!resultDisplayed) // Eğer sonuç gösterilmediyse
+            if (!waitingForNextLevel)
             {
-                choice1Text.text = result1;    // Sonucu kartta göster
-                resultDisplayed = true;       // Sonuç gösterildi olarak işaretle
-                choice2Button.interactable = false; // Diğer butonu devre dışı bırak
+                storyText.text = currentEvent.result1;
+                queuedNextLevel = currentEvent.nextLevelForChoice1;
+                waitingForNextLevel = true;
+
+                if (!currentEvent.isCorrectChoice1)
+                    healthManager.LoseHealth();
+
+                choice1Text.text = "Continue";
+                choice2Button.gameObject.SetActive(false);
             }
             else
             {
-                LoadNextLevel(nextLevelForChoice1); // İkinci tıklamada Inspector'dan gelen değerle level geçişi
+                currentLevel = queuedNextLevel;
+                LoadLevel();
             }
         });
 
-        // Seçenek 2 işlemleri
-        choice2Button.onClick.RemoveAllListeners();
         choice2Button.onClick.AddListener(() =>
         {
-            if (!resultDisplayed) // Eğer sonuç gösterilmediyse
+            if (!waitingForNextLevel)
             {
-                choice2Text.text = result2;    // Sonucu kartta göster
-                resultDisplayed = true;       // Sonuç gösterildi olarak işaretle
-                choice1Button.interactable = false; // Diğer butonu devre dışı bırak
+                storyText.text = currentEvent.result2;
+                queuedNextLevel = currentEvent.nextLevelForChoice2;
+                waitingForNextLevel = true;
+
+                if (!currentEvent.isCorrectChoice2)
+                    healthManager.LoseHealth();
+
+                choice2Text.text = "Continue";
+                choice1Button.gameObject.SetActive(false);
             }
             else
             {
-                LoadNextLevel(nextLevelForChoice2); // İkinci tıklamada Inspector'dan gelen değerle level geçişi
+                currentLevel = queuedNextLevel;
+                LoadLevel();
             }
         });
-    }
-
-    void LoadNextLevel(string nextLevelName)
-    {
-        // Sonuç gösterimi sıfırla ve bir sonraki level'e geç
-        resultDisplayed = false;
-        SceneManager.LoadScene(nextLevelName);
     }
 }

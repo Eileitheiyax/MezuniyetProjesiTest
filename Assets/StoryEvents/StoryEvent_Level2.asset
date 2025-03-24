@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9c8f4f1ce6aa86428a2e2b9ac17ea87, type: 3}
+  m_Name: StoryEvent_Level2
+  m_EditorClassIdentifier: 
+  storyText: You see a shining golden clock on top of the cabinet
+  choice1Text: Try to reach it by stacking the boxes
+  choice2Text: Cry and tell your parents that you want the object
+  result1: When you got on top of the boxes and were about to reach the golden clock,
+    the boxes tipped over and you hit your head and fainted. -1 health
+  result2: Your father slapped you for making too much noise and you fainted. -1
+    health
+  nextLevelForChoice1: 3
+  nextLevelForChoice2: 3
+  isCorrectChoice1: 0
+  isCorrectChoice2: 1
+  isCheckpoint: 0
