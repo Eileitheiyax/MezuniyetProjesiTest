@@ -17,8 +17,8 @@ MonoBehaviour:
   choice2Text: Dont Cry
   result1: You sleep so quietly that your family forgets you exist.
   result2: You sleep so quietly that your family forgets you exist.
-  nextLevelForChoice1: 1
-  nextLevelForChoice2: 1
+  nextLevelForChoice1: 2
+  nextLevelForChoice2: 2
   isCorrectChoice1: 1
   isCorrectChoice2: 0
   healthChangeChoice1: 0

@@ -18,8 +18,9 @@ MonoBehaviour:
   result1: You hear a sound, but it's the first time you've heard it. Maybe it's
     a bear?
   result2: You see animal footprints on the ground. It's probably a deer.
-  nextLevelForChoice1: 8
-  nextLevelForChoice2: 8
+  nextLevelForChoice1: 9
+  nextLevelForChoice2: 9
   isCorrectChoice1: 0
   isCorrectChoice2: 0
-  isCheckpoint: 0
+  healthChangeChoice1: 0
+  healthChangeChoice2: 0

@@ -1961,6 +1961,15 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 81597fd63b089824b9fd30876021ec8a, type: 2}
   - {fileID: 11400000, guid: 2e1848afeed10bc4fa5feb32b28eca79, type: 2}
   - {fileID: 11400000, guid: 237d4fcf09831a54a8e764632ba7cb43, type: 2}
+  - {fileID: 11400000, guid: 0802bb58bbd5e5643817bb682cfb705d, type: 2}
+  - {fileID: 11400000, guid: 5572d0015bd56f647a4edbc7ac7990db, type: 2}
+  - {fileID: 11400000, guid: 88117c7c6221ed848883fed4dd05d614, type: 2}
+  - {fileID: 11400000, guid: 91253b981da0e8f4ebd10f0983f5985d, type: 2}
+  - {fileID: 11400000, guid: 70f11d101ace99d4cb70dbad789ac3ca, type: 2}
+  - {fileID: 11400000, guid: 4cf82fd622f2d1440992dd784e928318, type: 2}
+  - {fileID: 11400000, guid: f08e70d408100cf4e806c962b8581581, type: 2}
+  - {fileID: 11400000, guid: afc26b7323ac3234c90de957d3af970a, type: 2}
+  - {fileID: 11400000, guid: 90118b4d975c0c64f856c18c82938f3e, type: 2}
   currentLevel: 3
   healthManager: {fileID: 0}
   audioSource: {fileID: 848491422}

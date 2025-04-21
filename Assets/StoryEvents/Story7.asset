@@ -20,8 +20,8 @@ MonoBehaviour:
     damaged. And you get a slap from your father. -1 health
   result2: Your father pours ice-cold water on you and forces you to work in the
     fields.
-  nextLevelForChoice1: 7
-  nextLevelForChoice2: 7
+  nextLevelForChoice1: 8
+  nextLevelForChoice2: 8
   isCorrectChoice1: 1
   isCorrectChoice2: 0
   healthChangeChoice1: 0

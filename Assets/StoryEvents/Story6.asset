@@ -20,8 +20,9 @@ MonoBehaviour:
     are very dangerous.
   result2: He says that there are not many monsters left out there because of the
     war, and the rest are hiding.
-  nextLevelForChoice1: 6
-  nextLevelForChoice2: 6
+  nextLevelForChoice1: 7
+  nextLevelForChoice2: 7
   isCorrectChoice1: 0
   isCorrectChoice2: 0
-  isCheckpoint: 0
+  healthChangeChoice1: 0
+  healthChangeChoice2: 0

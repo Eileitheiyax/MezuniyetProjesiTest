@@ -21,8 +21,8 @@ MonoBehaviour:
   result1: Your father is proud of you.
   result2: Your father is ashamed of you. Then he throws his spear at the deer and
     kills it.
-  nextLevelForChoice1: 5
-  nextLevelForChoice2: 5
+  nextLevelForChoice1: 6
+  nextLevelForChoice2: 6
   isCorrectChoice1: 0
   isCorrectChoice2: 0
   healthChangeChoice1: 1

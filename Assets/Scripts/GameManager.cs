@@ -148,7 +148,7 @@ public class GameManager : MonoBehaviour
 
     private void LoadNextLevel()
     {
-        string sceneName = "Level" + (currentLevel + 1);
+        string sceneName = "Level" + currentLevel; // +1 kaldırıldı
         Debug.Log("Yeni sahneye geçiliyor: " + sceneName);
         SceneManager.LoadScene(sceneName);
     }
