@@ -10,16 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b9c8f4f1ce6aa86428a2e2b9ac17ea87, type: 3}
-  m_Name: Story3
+  m_Name: Story15
   m_EditorClassIdentifier: 
-  storyText: Now that you're older, your father said he's taking you hunting.
-  choice1Text: Tell him you agreed to hunt
-  choice2Text: Tell him you want to read a book
-  result1: You set off into the woods with your father.
-  result2: "Your father said, \u201CAre you going to study and become a philosopher?\u201D,
-    slapped you and forced you to go hunting."
-  nextLevelForChoice1: 3
-  nextLevelForChoice2: 3
+  storyText: You walked to the crossroads. Which way will you go now?
+  choice1Text: Whispering Forest
+  choice2Text: 'Ridgecrest Mountain '
+  result1: Your journey to the forest has begun. Remember, this journey will be difficult
+  result2: Your journey to the forest has begun. Remember, this journey will be difficult
+  nextLevelForChoice1: 16
+  nextLevelForChoice2: 28
   isCorrectChoice1: 0
   isCorrectChoice2: 0
   healthChangeChoice1: 0

@@ -10,19 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b9c8f4f1ce6aa86428a2e2b9ac17ea87, type: 3}
-  m_Name: Story5
+  m_Name: Story17
   m_EditorClassIdentifier: 
-  storyText: 'You have a deer in front of you and you need to make a quick decision.
-    What are you going to do?
-
-'
-  choice1Text: Kill it.
-  choice2Text: Dont kill it.
-  result1: Your father is proud of you.
-  result2: Your father is ashamed of you. Then he throws his spear at the deer and
-    kills it.
-  nextLevelForChoice1: 5
-  nextLevelForChoice2: 5
+  storyText: You were walking along the road and saw an old man cooking something
+    on the fire.
+  choice1Text: Go to the man.
+  choice2Text: Ignore the man.
+  result1: The man gives you a life potion.
+  result2: You go on your way without saying anything
+  nextLevelForChoice1: 18
+  nextLevelForChoice2: 18
   isCorrectChoice1: 0
   isCorrectChoice2: 0
   healthChangeChoice1: 1

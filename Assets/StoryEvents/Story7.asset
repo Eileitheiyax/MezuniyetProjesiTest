@@ -22,6 +22,7 @@ MonoBehaviour:
     fields.
   nextLevelForChoice1: 7
   nextLevelForChoice2: 7
-  isCorrectChoice1: 0
+  isCorrectChoice1: 1
   isCorrectChoice2: 0
-  isCheckpoint: 0
+  healthChangeChoice1: 0
+  healthChangeChoice2: 0

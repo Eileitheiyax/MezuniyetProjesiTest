@@ -10,16 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b9c8f4f1ce6aa86428a2e2b9ac17ea87, type: 3}
-  m_Name: Story3
+  m_Name: Story19
   m_EditorClassIdentifier: 
-  storyText: Now that you're older, your father said he's taking you hunting.
-  choice1Text: Tell him you agreed to hunt
-  choice2Text: Tell him you want to read a book
-  result1: You set off into the woods with your father.
-  result2: "Your father said, \u201CAre you going to study and become a philosopher?\u201D,
-    slapped you and forced you to go hunting."
-  nextLevelForChoice1: 3
-  nextLevelForChoice2: 3
+  storyText: 
+  choice1Text: 
+  choice2Text: 
+  result1: 
+  result2: 
+  nextLevelForChoice1: 0
+  nextLevelForChoice2: 0
   isCorrectChoice1: 0
   isCorrectChoice2: 0
   healthChangeChoice1: 0
