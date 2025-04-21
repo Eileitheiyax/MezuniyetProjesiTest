@@ -5,34 +5,33 @@ public class HealthManager : MonoBehaviour
 {
     public int maxHealth = 3;
     public int currentHealth;
-
     public Image[] hearts;
-    public Sprite fullHeart;
-    public Sprite emptyHeart;
 
-    private void Start()
+    void Start()
     {
         currentHealth = maxHealth;
-        UpdateHearts();
+        UpdateHealthUI();
     }
 
     public void LoseHealth()
     {
         currentHealth--;
-
-        if (currentHealth < 0)
-            currentHealth = 0;
-
-        UpdateHearts();
-
-        Debug.Log("Can azaldý! Kalan can: " + currentHealth);
+        currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
+        UpdateHealthUI();
     }
 
-    void UpdateHearts()
+    public void Heal(int amount)
+    {
+        currentHealth += amount;
+        currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
+        UpdateHealthUI();
+    }
+
+    void UpdateHealthUI()
     {
         for (int i = 0; i < hearts.Length; i++)
         {
-            hearts[i].sprite = i < currentHealth ? fullHeart : emptyHeart;
+            hearts[i].enabled = (i < currentHealth);
         }
     }
 }

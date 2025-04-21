@@ -12,10 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9c8f4f1ce6aa86428a2e2b9ac17ea87, type: 3}
   m_Name: Story5
   m_EditorClassIdentifier: 
-  storyText: 'Level 5
-
-    Event : You have a deer in front of you and you need
-    to make a quick decision. What are you going to do?
+  storyText: 'You have a deer in front of you and you need to make a quick decision.
+    What are you going to do?
 
 '
   choice1Text: Kill it.

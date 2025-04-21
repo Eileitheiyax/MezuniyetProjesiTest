@@ -22,6 +22,10 @@ public class GameManager : MonoBehaviour
     private bool waitingForNextLevel = false;
     private int queuedNextLevel = -1;
 
+    [Header("Sound")]
+    public AudioSource audioSource;
+    public AudioClip buttonClickSound;
+
     void Start()
     {
         LoadLevel();
@@ -34,7 +38,6 @@ public class GameManager : MonoBehaviour
         choice1Text.text = "";
         choice2Text.text = "";
 
-        // Eğer mevcut level geçerli değilse, level dışı bir index varsa işlemi durdur
         if (currentLevel >= storyEvents.Length || storyEvents[currentLevel] == null)
         {
             Debug.LogWarning("Geçerli hikaye bulunamadı. currentLevel: " + currentLevel);
@@ -53,9 +56,11 @@ public class GameManager : MonoBehaviour
         choice1Button.onClick.RemoveAllListeners();
         choice2Button.onClick.RemoveAllListeners();
 
-        // Seçim 1 - Buton tıklama işlemi
+        // Seçim 1
         choice1Button.onClick.AddListener(() =>
         {
+            audioSource.PlayOneShot(buttonClickSound); // SES efekti
+
             if (!waitingForNextLevel)
             {
                 storyText.text = currentEvent.result1;
@@ -64,6 +69,8 @@ public class GameManager : MonoBehaviour
 
                 if (!currentEvent.isCorrectChoice1)
                     healthManager.LoseHealth();
+                else if (currentEvent.healthChangeChoice1 > 0)
+                    healthManager.Heal(currentEvent.healthChangeChoice1);
 
                 choice1Text.text = "Continue";
                 choice2Button.gameObject.SetActive(false);
@@ -71,14 +78,15 @@ public class GameManager : MonoBehaviour
             else
             {
                 currentLevel = queuedNextLevel;
-                // Sahne geçişini sağlayalım
                 LoadNextLevel();
             }
         });
 
-        // Seçim 2 - Buton tıklama işlemi
+        // Seçim 2
         choice2Button.onClick.AddListener(() =>
         {
+            audioSource.PlayOneShot(buttonClickSound); // SES efekti
+
             if (!waitingForNextLevel)
             {
                 storyText.text = currentEvent.result2;
@@ -87,6 +95,8 @@ public class GameManager : MonoBehaviour
 
                 if (!currentEvent.isCorrectChoice2)
                     healthManager.LoseHealth();
+                else if (currentEvent.healthChangeChoice2 > 0)
+                    healthManager.Heal(currentEvent.healthChangeChoice2);
 
                 choice2Text.text = "Continue";
                 choice1Button.gameObject.SetActive(false);
@@ -94,17 +104,14 @@ public class GameManager : MonoBehaviour
             else
             {
                 currentLevel = queuedNextLevel;
-                // Sahne geçişini sağlayalım
                 LoadNextLevel();
             }
         });
     }
 
-    // Yeni level'a geçişi sağlayan fonksiyon
     private void LoadNextLevel()
     {
-        // Level geçişi için sahne ismini SceneManager ile değiştirelim
-        string sceneName = "Level" + (currentLevel + 1); // Level1, Level2, ...
-        SceneManager.LoadScene(sceneName); // Seçilen sahneyi yükle
+        string sceneName = "Level" + (currentLevel + 1);
+        SceneManager.LoadScene(sceneName);
     }
 }
