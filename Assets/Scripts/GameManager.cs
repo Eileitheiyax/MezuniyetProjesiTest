@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement; // Sahne yönetimi için
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -28,6 +28,31 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        // Singleton üzerinden HealthManager al
+        if (healthManager == null && HealthManager.instance != null)
+        {
+            healthManager = HealthManager.instance;
+        }
+
+        // Sahnedeki yeni kalp görsellerini bul ve isimlerine göre sırala → bağla
+        if (healthManager != null)
+        {
+            GameObject[] heartObjects = GameObject.FindGameObjectsWithTag("Heart");
+
+            // Kalpleri isme göre sırala: Heart1, Heart2, Heart3
+            System.Array.Sort(heartObjects, (a, b) => a.name.CompareTo(b.name));
+
+            Image[] heartImages = new Image[heartObjects.Length];
+
+            for (int i = 0; i < heartObjects.Length; i++)
+            {
+                heartImages[i] = heartObjects[i].GetComponent<Image>();
+            }
+
+            healthManager.hearts = heartImages;
+            healthManager.UpdateHearts();
+        }
+
         LoadLevel();
     }
 
@@ -59,7 +84,7 @@ public class GameManager : MonoBehaviour
         // Seçim 1
         choice1Button.onClick.AddListener(() =>
         {
-            audioSource.PlayOneShot(buttonClickSound); // SES efekti
+            audioSource.PlayOneShot(buttonClickSound);
 
             if (!waitingForNextLevel)
             {
@@ -67,10 +92,16 @@ public class GameManager : MonoBehaviour
                 queuedNextLevel = currentEvent.nextLevelForChoice1;
                 waitingForNextLevel = true;
 
-                if (!currentEvent.isCorrectChoice1)
-                    healthManager.LoseHealth();
+                if (currentEvent.isCorrectChoice1) // ✔️ Tikliyse = Yanlış = Hasar
+                {
+                    Debug.Log("Seçim 1 yanlış (işaretli). Hasar alındı.");
+                    if (healthManager != null) healthManager.LoseHealth();
+                }
                 else if (currentEvent.healthChangeChoice1 > 0)
-                    healthManager.Heal(currentEvent.healthChangeChoice1);
+                {
+                    Debug.Log("Seçim 1 doğru. Can kazanıldı: " + currentEvent.healthChangeChoice1);
+                    if (healthManager != null) healthManager.Heal(currentEvent.healthChangeChoice1);
+                }
 
                 choice1Text.text = "Continue";
                 choice2Button.gameObject.SetActive(false);
@@ -85,7 +116,7 @@ public class GameManager : MonoBehaviour
         // Seçim 2
         choice2Button.onClick.AddListener(() =>
         {
-            audioSource.PlayOneShot(buttonClickSound); // SES efekti
+            audioSource.PlayOneShot(buttonClickSound);
 
             if (!waitingForNextLevel)
             {
@@ -93,10 +124,16 @@ public class GameManager : MonoBehaviour
                 queuedNextLevel = currentEvent.nextLevelForChoice2;
                 waitingForNextLevel = true;
 
-                if (!currentEvent.isCorrectChoice2)
-                    healthManager.LoseHealth();
+                if (currentEvent.isCorrectChoice2) // ✔️ Tikliyse = Yanlış = Hasar
+                {
+                    Debug.Log("Seçim 2 yanlış (işaretli). Hasar alındı.");
+                    if (healthManager != null) healthManager.LoseHealth();
+                }
                 else if (currentEvent.healthChangeChoice2 > 0)
-                    healthManager.Heal(currentEvent.healthChangeChoice2);
+                {
+                    Debug.Log("Seçim 2 doğru. Can kazanıldı: " + currentEvent.healthChangeChoice2);
+                    if (healthManager != null) healthManager.Heal(currentEvent.healthChangeChoice2);
+                }
 
                 choice2Text.text = "Continue";
                 choice1Button.gameObject.SetActive(false);
@@ -112,6 +149,7 @@ public class GameManager : MonoBehaviour
     private void LoadNextLevel()
     {
         string sceneName = "Level" + (currentLevel + 1);
+        Debug.Log("Yeni sahneye geçiliyor: " + sceneName);
         SceneManager.LoadScene(sceneName);
     }
 }

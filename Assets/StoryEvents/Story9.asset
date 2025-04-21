@@ -17,8 +17,9 @@ MonoBehaviour:
   choice2Text: No.
   result1: You see a young bear shot with an arrow. It's badly wounded.
   result2: You're heading the other way.
-  nextLevelForChoice1: 9
+  nextLevelForChoice1: 10
   nextLevelForChoice2: 11
   isCorrectChoice1: 0
   isCorrectChoice2: 0
-  isCheckpoint: 0
+  healthChangeChoice1: 0
+  healthChangeChoice2: 0

@@ -19,6 +19,7 @@ MonoBehaviour:
   result2: You sleep so quietly that your family forgets you exist.
   nextLevelForChoice1: 1
   nextLevelForChoice2: 1
-  isCorrectChoice1: 0
-  isCorrectChoice2: 1
-  isCheckpoint: 0
+  isCorrectChoice1: 1
+  isCorrectChoice2: 0
+  healthChangeChoice1: 0
+  healthChangeChoice2: 0

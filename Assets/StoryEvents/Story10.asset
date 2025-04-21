@@ -19,8 +19,9 @@ MonoBehaviour:
   result1: You killed the bear. You tie it up with ropes and start dragging it back
     to your village.
   result2: 'I don''t understand why, but okay. You''re heading the other way. '
-  nextLevelForChoice1: 5
-  nextLevelForChoice2: 5
+  nextLevelForChoice1: 12
+  nextLevelForChoice2: 11
   isCorrectChoice1: 0
   isCorrectChoice2: 0
-  isCheckpoint: 0
+  healthChangeChoice1: 0
+  healthChangeChoice2: 0

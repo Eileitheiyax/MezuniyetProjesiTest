@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9c8f4f1ce6aa86428a2e2b9ac17ea87, type: 3}
+  m_Name: Story12
+  m_EditorClassIdentifier: 
+  storyText: When you come out of the forest, you see smoke rising in the distance.
+    When you get closer to your village, you realise that most of the houses in the
+    village are on fire.
+  choice1Text: Run to your home
+  choice2Text: Move towards your house in hiding.
+  result1: The raiders are beating you up.
+  result2: You made it home without being seen.
+  nextLevelForChoice1: 13
+  nextLevelForChoice2: 13
+  isCorrectChoice1: 1
+  isCorrectChoice2: 0
+  healthChangeChoice1: 0
+  healthChangeChoice2: 0

@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9c8f4f1ce6aa86428a2e2b9ac17ea87, type: 3}
+  m_Name: Story13
+  m_EditorClassIdentifier: 
+  storyText: Your home is burning. Your mother and father is inside. Your sister
+    is outside but stuck under the planks. Fire is spreading like a wind who will
+    you save?
+  choice1Text: 'Mother and father '
+  choice2Text: 'Sister '
+  result1: Your mom dies, your father dies, your sister dies
+  result2: You managed to save your sister but your mother and father died
+  nextLevelForChoice1: 15
+  nextLevelForChoice2: 14
+  isCorrectChoice1: 0
+  isCorrectChoice2: 0
+  healthChangeChoice1: 0
+  healthChangeChoice2: 0
