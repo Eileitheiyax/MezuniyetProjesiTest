@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9c8f4f1ce6aa86428a2e2b9ac17ea87, type: 3}
+  m_Name: Story21
+  m_EditorClassIdentifier: 
+  storyText: When you wake up, you realise that you are really hungry and you need
+    something to eat, but even though you have killed the monster, many animals have
+    escaped from the forest. What are you going to do?
+  choice1Text: You see mushrooms up ahead. Pick them.
+  choice2Text: Wake the Thalorian and tell him to gather food.
+  result1: 'The mushrooms are poisonous. '
+  result2: The Thalorian wakes up and shares his rations with you.
+  nextLevelForChoice1: 22
+  nextLevelForChoice2: 22
+  isCorrectChoice1: 1
+  isCorrectChoice2: 0
+  healthChangeChoice1: 0
+  healthChangeChoice2: 0

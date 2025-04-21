@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9c8f4f1ce6aa86428a2e2b9ac17ea87, type: 3}
+  m_Name: Story23
+  m_EditorClassIdentifier: 
+  storyText: As the caravan was travelling, it was intercepted by bandits on the
+    road. What are you going to do?
+  choice1Text: Protect the caravan
+  choice2Text: Run while the caravan is being attacked.
+  result1: You destroy the attacking bandits in one fell swoop
+  result2: 'As Thalorian is a paladin, he has an oath to protect humans. He yells
+    at you, leaves your party and protects the caravan. '
+  nextLevelForChoice1: 40
+  nextLevelForChoice2: 24
+  isCorrectChoice1: 0
+  isCorrectChoice2: 0
+  healthChangeChoice1: 0
+  healthChangeChoice2: 0

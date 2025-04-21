@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   storyText: You came to your uncle's house and left your sister with them. Now he's
     asking you what you will do?
-  choice1Text: Tell him you neesd money and you're going after them.
+  choice1Text: Tell him you need money and you're going after them.
   choice2Text: Tell him you're going to the city to gather information and men.
   result1: Your uncle says you shouldn't use the main road. He says that the Kingdom
     of Gildedhelm and the Vargoth League are fighting there, so you cannot use that

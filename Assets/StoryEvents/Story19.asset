@@ -12,13 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9c8f4f1ce6aa86428a2e2b9ac17ea87, type: 3}
   m_Name: Story19
   m_EditorClassIdentifier: 
-  storyText: 
-  choice1Text: 
-  choice2Text: 
-  result1: 
-  result2: 
-  nextLevelForChoice1: 0
-  nextLevelForChoice2: 0
+  storyText: Travelling through the forest you come to a cliff and below, a large
+    wyvern is fighting with about 20 soldiers. What will you do?
+  choice1Text: Go down the cliff fast with the ropes the Thalorian brought.
+  choice2Text: Take the long way around the cliff and go down.
+  result1: You came off the ropes quickly and joined the battlefield. That's why
+    only 2 of the soldiers died
+  result2: More than half the warriors were dead by the time you came down.
+  nextLevelForChoice1: 20
+  nextLevelForChoice2: 20
   isCorrectChoice1: 0
   isCorrectChoice2: 0
   healthChangeChoice1: 0

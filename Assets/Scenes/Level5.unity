@@ -2045,6 +2045,13 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f08e70d408100cf4e806c962b8581581, type: 2}
   - {fileID: 11400000, guid: afc26b7323ac3234c90de957d3af970a, type: 2}
   - {fileID: 11400000, guid: 90118b4d975c0c64f856c18c82938f3e, type: 2}
+  - {fileID: 11400000, guid: 05e16bf35f22c034d93a4eb6dbec5c93, type: 2}
+  - {fileID: 11400000, guid: a1bf2ca3a67d83f4fb6b89a227142f74, type: 2}
+  - {fileID: 11400000, guid: e45fa5f333830a04d9eadf44bf0979d1, type: 2}
+  - {fileID: 11400000, guid: 03687ad11187af84b973605cf2827741, type: 2}
+  - {fileID: 11400000, guid: 5b8934a9106598d46b3abc17cc58040d, type: 2}
+  - {fileID: 11400000, guid: e33503f39e878694ba31ab412644d53b, type: 2}
+  - {fileID: 11400000, guid: 6d8a0b9b1c99aee4490fd54e814b4dbc, type: 2}
   currentLevel: 4
   healthManager: {fileID: 0}
   audioSource: {fileID: 1506828831}
