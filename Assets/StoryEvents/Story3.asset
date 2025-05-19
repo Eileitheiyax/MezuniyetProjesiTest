@@ -20,7 +20,7 @@ MonoBehaviour:
     slapped you and forced you to go hunting."
   nextLevelForChoice1: 4
   nextLevelForChoice2: 4
-  isCorrectChoice1: 0
+  isCorrectChoice1: 1
   isCorrectChoice2: 0
   healthChangeChoice1: 0
   healthChangeChoice2: 0

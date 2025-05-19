@@ -21,5 +21,5 @@ MonoBehaviour:
   nextLevelForChoice2: 5
   isCorrectChoice1: 0
   isCorrectChoice2: 0
-  healthChangeChoice1: 0
+  healthChangeChoice1: 1
   healthChangeChoice2: 0

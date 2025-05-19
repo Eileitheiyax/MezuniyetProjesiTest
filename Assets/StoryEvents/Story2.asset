@@ -24,4 +24,4 @@ MonoBehaviour:
   isCorrectChoice1: 1
   isCorrectChoice2: 0
   healthChangeChoice1: 0
-  healthChangeChoice2: 1
+  healthChangeChoice2: 0

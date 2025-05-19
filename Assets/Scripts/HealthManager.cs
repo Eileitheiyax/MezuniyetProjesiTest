@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class HealthManager : MonoBehaviour
 {
@@ -163,5 +164,20 @@ public class HealthManager : MonoBehaviour
         {
             healAudioSource.PlayOneShot(healSound);
         }
+    }
+    void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        damageOverlay = GameObject.Find("DamageOverlay")?.GetComponent<Image>();
+        healOverlay = GameObject.Find("HealOverlay")?.GetComponent<Image>();
     }
 }
