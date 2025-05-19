@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9c8f4f1ce6aa86428a2e2b9ac17ea87, type: 3}
+  m_Name: Story39
+  m_EditorClassIdentifier: 
+  storyText: "At the inn, she was impressed after overhearing your party\u2019s conversation.
+    In short, she tells you that a sorcerer has cast a spell on her and asks for
+    your help to break it."
+  choice1Text: Help her
+  choice2Text: Refuse to help her
+  result1: You went for the lab
+  result2: You went outside
+  nextLevelForChoice1: 40
+  nextLevelForChoice2: 44
+  isCorrectChoice1: 0
+  isCorrectChoice2: 0
+  healthChangeChoice1: 0
+  healthChangeChoice2: 0

@@ -19,7 +19,7 @@ MonoBehaviour:
   result1: You destroy the attacking bandits in one fell swoop
   result2: 'As Thalorian is a paladin, he has an oath to protect humans. He yells
     at you, leaves your party and protects the caravan. '
-  nextLevelForChoice1: 40
+  nextLevelForChoice1: 27
   nextLevelForChoice2: 24
   isCorrectChoice1: 0
   isCorrectChoice2: 0

@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9c8f4f1ce6aa86428a2e2b9ac17ea87, type: 3}
+  m_Name: Story36
+  m_EditorClassIdentifier: 
+  storyText: When you open your eyes, you see a fox licking your mouth.
+  choice1Text: Kick the fox
+  choice2Text: Let it lick your mouth
+  result1: "All of a sudden she's shouting, \u2018Stop!\u2019"
+  result2: "You hear a voice saying, \u2018Oh, you're finally awake.\u2019"
+  nextLevelForChoice1: 37
+  nextLevelForChoice2: 37
+  isCorrectChoice1: 0
+  isCorrectChoice2: 0
+  healthChangeChoice1: 0
+  healthChangeChoice2: 0

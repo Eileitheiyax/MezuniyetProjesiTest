@@ -20,9 +20,9 @@ MonoBehaviour:
   result1: 'The witch teleports you and your friend near the city. '
   result2: "Now, don't forget the colors I\u2019m about to say. \u201CBlue\u201D,
     \u201Cred\u201D, \u201Cblack\u201D. "
-  nextLevelForChoice1: 0
-  nextLevelForChoice2: 0
+  nextLevelForChoice1: 27
+  nextLevelForChoice2: 27
   isCorrectChoice1: 0
-  isCorrectChoice2: 0
+  isCorrectChoice2: 1
   healthChangeChoice1: 0
   healthChangeChoice2: 0

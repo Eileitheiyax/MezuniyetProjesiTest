@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9c8f4f1ce6aa86428a2e2b9ac17ea87, type: 3}
+  m_Name: Story37
+  m_EditorClassIdentifier: 
+  storyText: It's a talking fox
+  choice1Text: 'Reach for your sword '
+  choice2Text: 'Listen to the fox '
+  result1: "Fox says \u201CPlease listen to me, I don't mean any harm.\u201D"
+  result2: You started to listen
+  nextLevelForChoice1: 38
+  nextLevelForChoice2: 39
+  isCorrectChoice1: 0
+  isCorrectChoice2: 0
+  healthChangeChoice1: 0
+  healthChangeChoice2: 0

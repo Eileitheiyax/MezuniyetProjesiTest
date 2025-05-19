@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9c8f4f1ce6aa86428a2e2b9ac17ea87, type: 3}
+  m_Name: Story33
+  m_EditorClassIdentifier: 
+  storyText: While you were sleeping three drunks came and pissed on you.
+  choice1Text: Fight with drunks
+  choice2Text: Get up and go to the inn
+  result1: You managed to take them down because they were drunk.
+  result2: You started moving towards the inn
+  nextLevelForChoice1: 34
+  nextLevelForChoice2: 34
+  isCorrectChoice1: 0
+  isCorrectChoice2: 0
+  healthChangeChoice1: 0
+  healthChangeChoice2: 0
