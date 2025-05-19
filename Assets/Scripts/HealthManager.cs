@@ -21,7 +21,6 @@ public class HealthManager : MonoBehaviour
     [SerializeField] private AudioSource healAudioSource;
     [SerializeField] private AudioClip healSound;
 
-
     [Header("UI")]
     public Image[] hearts;
     public Sprite fullHeart;
@@ -57,12 +56,17 @@ public class HealthManager : MonoBehaviour
 
         if (damageAudioSource != null && damageSound != null)
         {
-            damageAudioSource.PlayOneShot(damageSound); // HASAR SESÝ
+            damageAudioSource.PlayOneShot(damageSound);
         }
 
         ShowDamageOverlay();
         UpdateHearts();
         AnimateDamagedHeart();
+
+        if (currentHealth <= 0)
+        {
+            RestartGame(); // Sahne baþtan yüklenecek
+        }
     }
 
     public void Heal(int amount)
@@ -71,8 +75,8 @@ public class HealthManager : MonoBehaviour
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
         Debug.Log("Can yenilendi. Yeni can: " + currentHealth);
 
-        ShowHealOverlay(); //  Ekraný yeþil yap
-        PlayHealSound();   //  Ýyileþme sesi çal
+        ShowHealOverlay();
+        PlayHealSound();
         UpdateHearts();
     }
 
@@ -111,13 +115,12 @@ public class HealthManager : MonoBehaviour
         }
     }
 
-    //  Hasar alan kalbe animasyon ekleyen fonksiyon
     private void AnimateDamagedHeart()
     {
         if (currentHealth >= 0 && currentHealth < hearts.Length)
         {
-            Image heart = hearts[currentHealth]; // Kýrýlan kalp
-            if (heart != null)
+            Image heart = hearts[currentHealth];
+            if (heart != null && heart.rectTransform != null)
             {
                 StartCoroutine(PunchScale(heart.rectTransform));
             }
@@ -126,14 +129,21 @@ public class HealthManager : MonoBehaviour
 
     private IEnumerator PunchScale(RectTransform target)
     {
+        if (target == null) yield break;
+
         Vector3 originalScale = target.localScale;
         Vector3 enlargedScale = originalScale * 1.3f;
         float duration = 0.1f;
 
-        target.localScale = enlargedScale;
+        if (target != null)
+            target.localScale = enlargedScale;
+
         yield return new WaitForSeconds(duration);
-        target.localScale = originalScale;
+
+        if (target != null)
+            target.localScale = originalScale;
     }
+
     public void ShowHealOverlay()
     {
         if (healOverlay == null) return;
@@ -165,6 +175,7 @@ public class HealthManager : MonoBehaviour
             healAudioSource.PlayOneShot(healSound);
         }
     }
+
     void OnEnable()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
@@ -179,5 +190,12 @@ public class HealthManager : MonoBehaviour
     {
         damageOverlay = GameObject.Find("DamageOverlay")?.GetComponent<Image>();
         healOverlay = GameObject.Find("HealOverlay")?.GetComponent<Image>();
+    }
+
+    private void RestartGame()
+    {
+        StopAllCoroutines(); //  Bu da önemli! Coroutine'leri durdur sahne geçiþi öncesi
+        currentHealth = maxHealth;
+        SceneManager.LoadScene("Level1");
     }
 }
