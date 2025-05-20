@@ -10,17 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b9c8f4f1ce6aa86428a2e2b9ac17ea87, type: 3}
-  m_Name: Story18
+  m_Name: Story48
   m_EditorClassIdentifier: 
-  storyText: On the way, a man in armour was camped on the ground. When he sees you,
-    he calls you over. What are you going to do?
-  choice1Text: Ask him who he is.
-  choice2Text: Ask him what he's doing in these woods.
-  result1: He says he's Tholorian who is a paladin and he's here for a monster
-  result2: He says there might be a monster here and if there is, he's here to kill
-    it.
-  nextLevelForChoice1: 19
-  nextLevelForChoice2: 19
+  storyText: "You wake up in the kingdom\u2019s prison. In the cell next to you is
+    the man who was chased through the marketplace. What will you do?"
+  choice1Text: Call the warden.
+  choice2Text: Do nothing.
+  result1: No body answers.
+  result2: You are waiting.
+  nextLevelForChoice1: 49
+  nextLevelForChoice2: 49
   isCorrectChoice1: 0
   isCorrectChoice2: 0
   healthChangeChoice1: 0

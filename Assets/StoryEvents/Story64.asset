@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9c8f4f1ce6aa86428a2e2b9ac17ea87, type: 3}
+  m_Name: Story64
+  m_EditorClassIdentifier: 
+  storyText: After preparations, you and the general climb the main gate wall and
+    see an endless enemy army. A loud explosion rings out, a breach in the walls.
+    The general leaves you in charge of the gate and rushes to the breach. What will
+    you do?
+  choice1Text: Target the archers
+  choice2Text: Target the infantry
+  result1: You inflicted great damage to enemy archers
+  result2: While you target infantry, enemy archers shoot your soldiers.
+  nextLevelForChoice1: 65
+  nextLevelForChoice2: 65
+  isCorrectChoice1: 0
+  isCorrectChoice2: 0
+  healthChangeChoice1: 0
+  healthChangeChoice2: 0

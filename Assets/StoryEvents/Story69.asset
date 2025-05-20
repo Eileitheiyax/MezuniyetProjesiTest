@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9c8f4f1ce6aa86428a2e2b9ac17ea87, type: 3}
+  m_Name: Story69
+  m_EditorClassIdentifier: 
+  storyText: "His right shoulder is injured\u2014how do you want to strike?"
+  choice1Text: Attack from his right side.
+  choice2Text: "Attack him? I can\u2019t hurt a giant like that\u2014I need to wear
+    him out. He\u2019s already injured anyway."
+  result1: You managed to wound the giant, but took a hit from his axe in return.
+  result2: "His movements are becoming erratic\u2014your plan is working."
+  nextLevelForChoice1: 70
+  nextLevelForChoice2: 70
+  isCorrectChoice1: 1
+  isCorrectChoice2: 0
+  healthChangeChoice1: 0
+  healthChangeChoice2: 0

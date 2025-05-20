@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9c8f4f1ce6aa86428a2e2b9ac17ea87, type: 3}
+  m_Name: Story68
+  m_EditorClassIdentifier: 
+  storyText: "The enemy forces retreat into the forest, too weakened to take the
+    city. As you look beyond the wall, you see a giant man with a battle axe\u2014Eldrich
+    Valtorin, the leader of the resistance. He challenges you to a duel."
+  choice1Text: There is nothing honourable about war. Order your archers to shoot
+    Valtorin.
+  choice2Text: Order your troops to halt and fight one last battle alone
+  result1: Archers killed Valtorin
+  result2: You grab your weapon and step forward to face the giant man.
+  nextLevelForChoice1: 71
+  nextLevelForChoice2: 69
+  isCorrectChoice1: 0
+  isCorrectChoice2: 0
+  healthChangeChoice1: 0
+  healthChangeChoice2: 0

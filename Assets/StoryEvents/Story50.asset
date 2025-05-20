@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b9c8f4f1ce6aa86428a2e2b9ac17ea87, type: 3}
-  m_Name: Story18
+  m_Name: Story50
   m_EditorClassIdentifier: 
-  storyText: On the way, a man in armour was camped on the ground. When he sees you,
-    he calls you over. What are you going to do?
-  choice1Text: Ask him who he is.
-  choice2Text: Ask him what he's doing in these woods.
-  result1: He says he's Tholorian who is a paladin and he's here for a monster
-  result2: He says there might be a monster here and if there is, he's here to kill
-    it.
-  nextLevelForChoice1: 19
-  nextLevelForChoice2: 19
+  storyText: "He says he\u2019s an agent of the Vargoth resistance and came to the
+    city to gather information."
+  choice1Text: Tell him he did a great job.
+  choice2Text: Say nothing
+  result1: He says he liked your joke and continues with his story.
+  result2: "This guy probably won\u2019t stop talking. He\u2019s still telling his
+    story."
+  nextLevelForChoice1: 51
+  nextLevelForChoice2: 51
   isCorrectChoice1: 0
   isCorrectChoice2: 0
   healthChangeChoice1: 0

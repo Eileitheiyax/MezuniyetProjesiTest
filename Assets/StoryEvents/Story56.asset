@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9c8f4f1ce6aa86428a2e2b9ac17ea87, type: 3}
+  m_Name: Story56
+  m_EditorClassIdentifier: 
+  storyText: They sent you to a bandit camp. When you look at their banners, you
+    realize these are the ones who raided your village.The commander puts the troops
+    under your command and waits to see what you'll do.
+  choice1Text: Go straight through the main gate.
+  choice2Text: Move quietly and kill as many men as you can.
+  result1: You're cleaning up the outside part, but most of your soldiers died.
+  result2: You've had a few casualties, but you've cleared out.
+  nextLevelForChoice1: 57
+  nextLevelForChoice2: 57
+  isCorrectChoice1: 0
+  isCorrectChoice2: 0
+  healthChangeChoice1: 0
+  healthChangeChoice2: 0
