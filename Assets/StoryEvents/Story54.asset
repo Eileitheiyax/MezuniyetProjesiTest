@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   storyText: They put you through an intense and grueling training.
   choice1Text: I can feel myself growing stronger.
-  choice2Text: I want more power.
+  choice2Text: I was always powerful
   result1: 
   result2: 
   nextLevelForChoice1: 55
@@ -22,4 +22,4 @@ MonoBehaviour:
   isCorrectChoice1: 0
   isCorrectChoice2: 0
   healthChangeChoice1: 3
-  healthChangeChoice2: 3
+  healthChangeChoice2: 0

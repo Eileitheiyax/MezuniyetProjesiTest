@@ -18,8 +18,8 @@ MonoBehaviour:
   choice2Text: Thank you for playing.
   result1: You deflect his first axe strike and slash his abdomen, ending the fight.
   result2: Valtorin falls to his knees, then collapses to the ground and dies.
-  nextLevelForChoice1: 71
-  nextLevelForChoice2: 71
+  nextLevelForChoice1: 72
+  nextLevelForChoice2: 72
   isCorrectChoice1: 0
   isCorrectChoice2: 0
   healthChangeChoice1: 0
