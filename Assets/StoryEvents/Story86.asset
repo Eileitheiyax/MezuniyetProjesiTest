@@ -12,15 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9c8f4f1ce6aa86428a2e2b9ac17ea87, type: 3}
   m_Name: Story86
   m_EditorClassIdentifier: 
-  storyText: The preparations for the attack are complete, and you're ready for battle.
-    What will you do next?
-  choice1Text: 'This is not your fight. You decide to leave the area. '
-  choice2Text: Attack the monster.
-  result1: The others understood your decision. You left them behind and continued
-    on your way.
-  result2: 
-  nextLevelForChoice1: 8
-  nextLevelForChoice2: 82
+  storyText: The crocodile's coming at you, what are you gonna do?
+  choice1Text: Try throwing a rock at its eye.
+  choice2Text: Try to escape from the crocodile
+  result1: It's your lucky day. The crocodile's back in the water.
+  result2: You managed to escape
+  nextLevelForChoice1: 87
+  nextLevelForChoice2: 87
   isCorrectChoice1: 0
   isCorrectChoice2: 0
   healthChangeChoice1: 0

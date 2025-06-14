@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9c8f4f1ce6aa86428a2e2b9ac17ea87, type: 3}
+  m_Name: Story99
+  m_EditorClassIdentifier: 
+  storyText: While your soldiers are fighting on the wall, enemy soldiers come out
+    from a secret door and move towards your siege weapons.
+  choice1Text: Send the cavalry
+  choice2Text: Siege weapons no longer matter, keep climbing the walls.
+  result1: Your cavalry is flattening the troops coming out.
+  result2: After your catapults are destroyed, the remaining enemy soldiers turn
+    to the archers.
+  nextLevelForChoice1: 100
+  nextLevelForChoice2: 100
+  isCorrectChoice1: 0
+  isCorrectChoice2: 0
+  healthChangeChoice1: 0
+  healthChangeChoice2: 0

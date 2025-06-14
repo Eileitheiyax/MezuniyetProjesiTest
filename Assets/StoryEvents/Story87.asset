@@ -12,16 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9c8f4f1ce6aa86428a2e2b9ac17ea87, type: 3}
   m_Name: Story87
   m_EditorClassIdentifier: 
-  storyText: The preparations for the attack are complete, and you're ready for battle.
-    What will you do next?
-  choice1Text: 'This is not your fight. You decide to leave the area. '
-  choice2Text: Attack the monster.
-  result1: The others understood your decision. You left them behind and continued
-    on your way.
-  result2: 
-  nextLevelForChoice1: 8
-  nextLevelForChoice2: 82
+  storyText: You escaped with Morgoth, and he took you to their fortress. You stood
+    before the king, and he asked you why you were there.
+  choice1Text: Tell him what you've been through.
+  choice2Text: Remain silent
+  result1: The king listens to you and tells you to join them.
+  result2: Morgoth explains the situation on your behalf. Afterwards, the king says
+    he wants you to join them.
+  nextLevelForChoice1: 88
+  nextLevelForChoice2: 88
   isCorrectChoice1: 0
-  isCorrectChoice2: 0
+  isCorrectChoice2: 1
   healthChangeChoice1: 0
   healthChangeChoice2: 0

@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9c8f4f1ce6aa86428a2e2b9ac17ea87, type: 3}
+  m_Name: Story93
+  m_EditorClassIdentifier: 
+  storyText: You saved everyone and returned to the fortress. Some time later, the
+    king summoned you and began preparing for war. An attack on the capital is being
+    planned, and he wants to hear your thoughts.
+  choice1Text: This is a city siege the soldiers will need shields.
+  choice2Text: 'Let''s give the soldiers large hammers for destructive power.         '
+  result1: 
+  result2: 
+  nextLevelForChoice1: 94
+  nextLevelForChoice2: 94
+  isCorrectChoice1: 0
+  isCorrectChoice2: 0
+  healthChangeChoice1: 0
+  healthChangeChoice2: 0

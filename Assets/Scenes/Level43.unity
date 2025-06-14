@@ -2862,6 +2862,18 @@ MonoBehaviour:
   - {fileID: 11400000, guid: b07c3fb1add9664479a416512f1448af, type: 2}
   - {fileID: 11400000, guid: d45c924657a1b3547acfbf1a1a029e02, type: 2}
   - {fileID: 11400000, guid: b7cac42deb096d84f9f2934ff11d7c53, type: 2}
+  - {fileID: 11400000, guid: 0d3ebb30b8320a3428d85b99150b7ec5, type: 2}
+  - {fileID: 11400000, guid: 4c7fc1f59b3f552418a75f7a380c4150, type: 2}
+  - {fileID: 11400000, guid: 82588da0530a6864b9369b45fbc46f8d, type: 2}
+  - {fileID: 11400000, guid: 7702f0093a7a41645aadf4942b5539a3, type: 2}
+  - {fileID: 11400000, guid: 5a8bf7765ef79434b88ac59ad67673d4, type: 2}
+  - {fileID: 11400000, guid: 6ae25413b476ed248b9c8addc64a11de, type: 2}
+  - {fileID: 11400000, guid: 95e5df00aa0f8fc4f8e6a9aac29144e2, type: 2}
+  - {fileID: 11400000, guid: 00c0d60f3295bea41a1dc574a3b12bde, type: 2}
+  - {fileID: 11400000, guid: ae3cf41e83c50f5449a1298fc7bc11e7, type: 2}
+  - {fileID: 11400000, guid: 93978b4711c9dc7418b054fbc6a7e276, type: 2}
+  - {fileID: 11400000, guid: c34447c89df16284e891873ace684c7f, type: 2}
+  - {fileID: 11400000, guid: 2ab19d0efb2e2e243b20f5a2dd295079, type: 2}
   currentLevel: 42
   healthManager: {fileID: 0}
   audioSource: {fileID: 1136191010}

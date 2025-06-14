@@ -12,15 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9c8f4f1ce6aa86428a2e2b9ac17ea87, type: 3}
   m_Name: Story88
   m_EditorClassIdentifier: 
-  storyText: The preparations for the attack are complete, and you're ready for battle.
-    What will you do next?
-  choice1Text: 'This is not your fight. You decide to leave the area. '
-  choice2Text: Attack the monster.
-  result1: The others understood your decision. You left them behind and continued
-    on your way.
-  result2: 
-  nextLevelForChoice1: 8
-  nextLevelForChoice2: 82
+  storyText: The king tells you that there is a band of bandits nearby and that the
+    prisoners there must be rescued.
+  choice1Text: Tell him you'll do the job
+  choice2Text: 'Tell him you''ll do the job, '
+  result1: You set out with your team and the soldiers of Vargoth.
+  result2: You set out with your team and the soldiers of Vargoth.
+  nextLevelForChoice1: 89
+  nextLevelForChoice2: 89
   isCorrectChoice1: 0
   isCorrectChoice2: 0
   healthChangeChoice1: 0

@@ -12,15 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9c8f4f1ce6aa86428a2e2b9ac17ea87, type: 3}
   m_Name: Story90
   m_EditorClassIdentifier: 
-  storyText: The preparations for the attack are complete, and you're ready for battle.
-    What will you do next?
-  choice1Text: 'This is not your fight. You decide to leave the area. '
-  choice2Text: Attack the monster.
-  result1: The others understood your decision. You left them behind and continued
-    on your way.
-  result2: 
-  nextLevelForChoice1: 8
-  nextLevelForChoice2: 82
+  storyText: Prisoners are safe. The soldiers are waiting your next order.
+  choice1Text: Our goal was to rescue the prisoners. Let's go back
+  choice2Text: "Launc an attack and kill all the bandits\t"
+  result1: You are turning back.
+  result2: War cries echo in the air.
+  nextLevelForChoice1: 93
+  nextLevelForChoice2: 91
   isCorrectChoice1: 0
   isCorrectChoice2: 0
   healthChangeChoice1: 0

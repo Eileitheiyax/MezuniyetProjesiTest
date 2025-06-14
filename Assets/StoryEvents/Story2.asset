@@ -15,8 +15,8 @@ MonoBehaviour:
   storyText: You see a shining golden clock on top of the cabinet
   choice1Text: Try to reach it by stacking the boxes
   choice2Text: Cry and tell your parents that you want the object
-  result1: When you got on top of the boxes and were about to reach the golden clock,
-    the boxes tipped over and you hit your head and fainted. -1 health
+  result1: 'When you got on top of the boxes and were about to reach the golden clock,
+    the boxes tipped over and you hit your head and fainted. '
   result2: 'Your father slapped you for making too much noise and you fainted. '
   nextLevelForChoice1: 3
   nextLevelForChoice2: 3

@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9c8f4f1ce6aa86428a2e2b9ac17ea87, type: 3}
+  m_Name: Story92
+  m_EditorClassIdentifier: 
+  storyText: A giant man with an axe in his hand is shouting a battle cry. This is
+    their leader.
+  choice1Text: Order the troops to stand back. This kill must be yours.
+  choice2Text: Take your troops and attack this giant of a man.
+  result1: You're badly wounded, but you manage to take down this giant. The soldiers
+    are proud of you.
+  result2: You take down this giant of a man without taking any damage.
+  nextLevelForChoice1: 93
+  nextLevelForChoice2: 93
+  isCorrectChoice1: 1
+  isCorrectChoice2: 0
+  healthChangeChoice1: 0
+  healthChangeChoice2: 0
