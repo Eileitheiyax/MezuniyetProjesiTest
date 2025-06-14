@@ -22,7 +22,7 @@ MonoBehaviour:
     beating too.
   nextLevelForChoice1: 107
   nextLevelForChoice2: 48
-  isCorrectChoice1: 1
+  isCorrectChoice1: 0
   isCorrectChoice2: 0
   healthChangeChoice1: 0
   healthChangeChoice2: 0
