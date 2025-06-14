@@ -15,11 +15,11 @@ MonoBehaviour:
   storyText: You left the sorcerer's house and arrived in the city.You see a young
     man being beaten by four men in the street.
   choice1Text: Help the child
-  choice2Text: Go on your way like its nothing (IP)
+  choice2Text: 'Go on your way like its nothing '
   result1: They're beating the shit out of you and you faint.
   result2: Hooded man approches you
   nextLevelForChoice1: 48
-  nextLevelForChoice2: 0
+  nextLevelForChoice2: 104
   isCorrectChoice1: 0
   isCorrectChoice2: 0
   healthChangeChoice1: 0

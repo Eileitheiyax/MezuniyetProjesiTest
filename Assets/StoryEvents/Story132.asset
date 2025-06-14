@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9c8f4f1ce6aa86428a2e2b9ac17ea87, type: 3}
+  m_Name: Story132
+  m_EditorClassIdentifier: 
+  storyText: You stand before a door adorned with intricate motifs, its inscription
+    glowing in blue.
+  choice1Text: Speak friend and enter
+  choice2Text: Open sesame!
+  result1: 
+  result2: "The door didn\u2019t respond to your words, but your teammate spoke the
+    correct ones and the door opened."
+  nextLevelForChoice1: 133
+  nextLevelForChoice2: 133
+  isCorrectChoice1: 0
+  isCorrectChoice2: 0
+  healthChangeChoice1: 0
+  healthChangeChoice2: 0

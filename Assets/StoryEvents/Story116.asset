@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9c8f4f1ce6aa86428a2e2b9ac17ea87, type: 3}
+  m_Name: Story116
+  m_EditorClassIdentifier: 
+  storyText: When you enter, 2 square floors will be side by side and move forward
+    5 layers. You have to press the right ones or you will fall down and die. Correct
+    options 1. right, 2. right, 3. left, 4. left, 5. right
+  choice1Text: Right right left left right
+  choice2Text: "I\u2019m getting sleepy."
+  result1: 
+  result2: 
+  nextLevelForChoice1: 117
+  nextLevelForChoice2: 117
+  isCorrectChoice1: 0
+  isCorrectChoice2: 0
+  healthChangeChoice1: 0
+  healthChangeChoice2: 0

@@ -17,7 +17,7 @@ MonoBehaviour:
   choice1Text: Help in the field
   choice2Text: Sleep in front of the house
   result1: You irrigate the field. You irrigate in such a way that the crops are
-    damaged. And you get a slap from your father. -1 health
+    damaged. And you get a slap from your father.
   result2: Your father pours ice-cold water on you and forces you to work in the
     fields.
   nextLevelForChoice1: 8

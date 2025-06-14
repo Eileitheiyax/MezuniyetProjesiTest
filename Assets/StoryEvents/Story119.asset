@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9c8f4f1ce6aa86428a2e2b9ac17ea87, type: 3}
+  m_Name: Story119
+  m_EditorClassIdentifier: 
+  storyText: When you read the last page, the schematic burns and disappears. Everyone's
+    very excited, especially the leader. But he says that it is very difficult to
+    enter this treasure, so you have to wait for the right time.
+  choice1Text: Go to your room and get some sleep
+  choice2Text: Join the festivities.
+  result1: 
+  result2: You get drunk and head off to sleep, but tumble down the stairs and hit
+    your head.
+  nextLevelForChoice1: 120
+  nextLevelForChoice2: 120
+  isCorrectChoice1: 0
+  isCorrectChoice2: 1
+  healthChangeChoice1: 0
+  healthChangeChoice2: 0

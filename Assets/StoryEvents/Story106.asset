@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9c8f4f1ce6aa86428a2e2b9ac17ea87, type: 3}
+  m_Name: Story106
+  m_EditorClassIdentifier: 
+  storyText: "After the chase, he fled into a building. Once inside, they told you,
+    \u201CThere are very few people in this city who can keep up with Finn. Would
+    you like to join the Thieves\u2019 Guild?\u201D"
+  choice1Text: 'Join the thieves guild '
+  choice2Text: Actually, there's a kid I need to go back and help.
+  result1: Hello thief
+  result2: You went back to help the child, but the ones beating him gave you a good
+    beating too.
+  nextLevelForChoice1: 107
+  nextLevelForChoice2: 48
+  isCorrectChoice1: 1
+  isCorrectChoice2: 0
+  healthChangeChoice1: 0
+  healthChangeChoice2: 0

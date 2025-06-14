@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9c8f4f1ce6aa86428a2e2b9ac17ea87, type: 3}
+  m_Name: Story113
+  m_EditorClassIdentifier: 
+  storyText: "You returned to your hideout and prepared to open the schematics. A
+    woman arrived and said, \u201CEach page of the schematic is enchanted, once you
+    read the information, the page will burn.\u201D In short, you\u2019ll have to
+    memorize everything."
+  choice1Text: I'm ready
+  choice2Text: How hard could it be?
+  result1: 
+  result2: 
+  nextLevelForChoice1: 114
+  nextLevelForChoice2: 114
+  isCorrectChoice1: 0
+  isCorrectChoice2: 0
+  healthChangeChoice1: 3
+  healthChangeChoice2: 3

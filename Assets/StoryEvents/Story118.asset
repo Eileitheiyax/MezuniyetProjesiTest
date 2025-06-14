@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9c8f4f1ce6aa86428a2e2b9ac17ea87, type: 3}
+  m_Name: Story118
+  m_EditorClassIdentifier: 
+  storyText: When you enter the treasury, you will walk a little further and you
+    will see two cubs. You need to take the one with the black stone on it from these
+    cups.
+  choice1Text: With the black stone.
+  choice2Text: I take back what I said this is actually really hard.
+  result1: 
+  result2: 
+  nextLevelForChoice1: 119
+  nextLevelForChoice2: 119
+  isCorrectChoice1: 0
+  isCorrectChoice2: 0
+  healthChangeChoice1: 0
+  healthChangeChoice2: 0
