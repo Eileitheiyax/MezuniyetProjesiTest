@@ -16,10 +16,10 @@ MonoBehaviour:
     your revenge.
   choice1Text: Thank you for playing.
   choice2Text: Thank you for playing.
-  result1: You deflect his first axe strike and slash his abdomen, ending the fight.
-  result2: Valtorin falls to his knees, then collapses to the ground and dies.
-  nextLevelForChoice1: 72
-  nextLevelForChoice2: 72
+  result1: 
+  result2: 
+  nextLevelForChoice1: 0
+  nextLevelForChoice2: 0
   isCorrectChoice1: 0
   isCorrectChoice2: 0
   healthChangeChoice1: 0

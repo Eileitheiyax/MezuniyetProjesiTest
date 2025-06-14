@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9c8f4f1ce6aa86428a2e2b9ac17ea87, type: 3}
+  m_Name: Story77
+  m_EditorClassIdentifier: 
+  storyText: While travelling through the mines, you see that some parts of the main
+    road have collapsed and there are cliffs on both sides. What are you going to
+    do?
+  choice1Text: Take the main road. Jump across the destroyed parts.
+  choice2Text: Try to hold on to the edge of the cliff.Onyx says it's a bad idea.
+  result1: You're crossing successfully.
+  result2: 'Clinging to the edge, you slip, hit your head and are about to fall down
+    when Onyx manages to catch you. '
+  nextLevelForChoice1: 78
+  nextLevelForChoice2: 78
+  isCorrectChoice1: 0
+  isCorrectChoice2: 1
+  healthChangeChoice1: 0
+  healthChangeChoice2: 0

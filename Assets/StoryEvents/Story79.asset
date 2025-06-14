@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9c8f4f1ce6aa86428a2e2b9ac17ea87, type: 3}
+  m_Name: Story79
+  m_EditorClassIdentifier: 
+  storyText: While climbing the mountain, you joined a group. Their goal is to slay
+    a monster.
+  choice1Text: Ask them what the monster's weakness is.
+  choice2Text: Ask them what the monster is and why it needs to be slain.
+  result1: They told you that the monster is afraid of fire.
+  result2: They say the monster resembles a large white ape and has been attacking
+    the people living on the mountain.
+  nextLevelForChoice1: 80
+  nextLevelForChoice2: 80
+  isCorrectChoice1: 0
+  isCorrectChoice2: 0
+  healthChangeChoice1: 0
+  healthChangeChoice2: 0

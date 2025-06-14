@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9c8f4f1ce6aa86428a2e2b9ac17ea87, type: 3}
+  m_Name: Story84
+  m_EditorClassIdentifier: 
+  storyText: A deep voice tells you that it can provide information about the future,
+    but in exchange, it requires a piece of your flesh. What will you do?
+  choice1Text: Cut your finger
+  choice2Text: Run away
+  result1: "Now, don't forget the colors I\u2019m about to say. \u201CBlue\u201D,
+    \u201Cred\u201D, \u201Cblack\u201D"
+  result2: 
+  nextLevelForChoice1: 27
+  nextLevelForChoice2: 27
+  isCorrectChoice1: 1
+  isCorrectChoice2: 0
+  healthChangeChoice1: 0
+  healthChangeChoice2: 0

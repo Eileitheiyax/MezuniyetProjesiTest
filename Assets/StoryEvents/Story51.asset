@@ -15,14 +15,14 @@ MonoBehaviour:
   storyText: He says his men will soon cause chaos in the city and that he can help
     you escape from prison. In return, he wants you to join the resistance.
   choice1Text: Don't answer and stay in the cell
-  choice2Text: Join Morgoth (IP)
+  choice2Text: 'Join Morgoth '
   result1: Bells start ringing in the city, and most of the soldiers rush outside
     to help. Meanwhile, Morgoth lifts the joint bar of his cell and escapes.
   result2: Bells ring throughout the city, and most of the soldiers rush outside
     to help. Meanwhile, Morgoth lifts the joint of his cell door and steps out. Then
     he unlocks your cell, and the two of you escape together.
   nextLevelForChoice1: 52
-  nextLevelForChoice2: 0
+  nextLevelForChoice2: 85
   isCorrectChoice1: 0
   isCorrectChoice2: 0
   healthChangeChoice1: 0

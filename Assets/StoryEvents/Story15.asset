@@ -18,7 +18,7 @@ MonoBehaviour:
   result1: Your journey to the forest has begun. Remember, this journey will be difficult
   result2: Your journey to the forest has begun. Remember, this journey will be difficult
   nextLevelForChoice1: 16
-  nextLevelForChoice2: 28
+  nextLevelForChoice2: 72
   isCorrectChoice1: 0
   isCorrectChoice2: 0
   healthChangeChoice1: 0

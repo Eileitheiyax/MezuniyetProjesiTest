@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9c8f4f1ce6aa86428a2e2b9ac17ea87, type: 3}
+  m_Name: Story73
+  m_EditorClassIdentifier: 
+  storyText: You see a woman camping. What will you do?
+  choice1Text: Ask her who she is.
+  choice2Text: Ask her what she is doing.
+  result1: He says his name is Onyx. He s lost in the mountains, says he's trying
+    to get to the city.She joined your party
+  result2: She's lost in the mountains, says he's trying to get to the city. She
+    joined your party
+  nextLevelForChoice1: 74
+  nextLevelForChoice2: 74
+  isCorrectChoice1: 0
+  isCorrectChoice2: 0
+  healthChangeChoice1: 0
+  healthChangeChoice2: 0
